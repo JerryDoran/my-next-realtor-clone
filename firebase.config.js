@@ -4,12 +4,12 @@ import { getAuth } from 'firebase/auth';
 import { getStorage } from 'firebase/storage';
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyA6-YOsCgv24EuQUBLksGSXfFtg4KqEWhs',
-  authDomain: 'next-realtor-app.firebaseapp.com',
-  projectId: 'next-realtor-app',
-  storageBucket: 'next-realtor-app.appspot.com',
-  messagingSenderId: '131729271523',
-  appId: '1:131729271523:web:55cc3636b9fd037bf4f3d6',
+  apiKey: process.env.NEXT_PUBLIC_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_APP_ID,
 };
 
 const app = getApps().length > 0 ? getApp() : initializeApp(firebaseConfig);
